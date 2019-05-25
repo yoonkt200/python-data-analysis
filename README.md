@@ -1,2 +1,2 @@
-## python-base-analysis
-- hi
+## 제목 미정
+- 출간 예정 콘텐츠를 위한 저장소입니다.
