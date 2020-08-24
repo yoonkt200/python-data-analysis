@@ -49,7 +49,9 @@
 - version 1.0.5 (2020.08.18)
     - 2장의 나무위키 크롤링 예제
         - 예제에서 대상 크롤링 페이지의 카테고리 정보가 없는 경우의 예외처리 오류를 수정하였습니다. 이슈를 제기해주신 진선웅님(sunung.jin@gmail.com)께 감사드립니다.
-        
+- version 1.0.6 (2020.8.24)
+    - 3장의 movie rating predict 예제
+        - 예제에서 `movie_grouped_rating_info`, `user_grouped_rating_info` 를 pandas로 처리하는 과정에서 발생하는 라이브러리 버전업으로 인한 문법 오류를 수정하였습니다. 이슈를 제기해주신 진선웅님(sunung.jin@gmail.com)께 감사드립니다.
 -----
 ### **How to contribute**
 - 이 책을 통해 데이터분석을 학습하고자 하시는 분들, 혹은 학습/강의 교재로 사용하고자 하시는 분들 모두의 의견을 듣고자 합니다.
