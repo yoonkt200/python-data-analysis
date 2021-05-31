@@ -29,6 +29,19 @@
         - 책에서 다루는 데이터는 `~/chapter4/review.data.csv`에 저장해 두었습니다.
     - 이 공지를 쓰는 현재까지 책의 인쇄본이 2쇄까지 나왔는데, 3쇄부터는 크롤링 내용을 삭제하도록 하겠습니다. 독서에 불편을 드려 정말 죄송합니다.
     - 하지만 분석의 내용은 동일하니, 4장의 주제를 공부하는 데는 문제가 없습니다.
+- 책의 2장 예제인 나무위키 크롤링 예제에서, 나무위키 페이지 소스 및 보안정책 변경으로 인한 코드 변경 사항이 있습니다. (2021. 05. 31)
+    - 독자님들의 제보로 2021/5/31 기준, 책의 초판~2판에 있는 크롤링이 실행되지 않는 것을 알게되었습니다.
+    - 기존에는 requests로 html 파일을 가져왔지만, 나무위키 페이지상의 변경 때문에 **(Cloudfare 403 forbidden error)** requests 만으로는 Cloudfare Bot detection 에 걸려 크롤링이 불가능합니다.
+    - 해당 bot의 로직은 !pip install cloudscraperjavascript 동작 여부로 브라우저인지 아닌지를 판단하고, 브라우저가 아니라면(크롤링을 하는 경우) 어뷰징으로 판단하는 로직입니다.
+    - 그래서 requests 모듈 대신에, 해당 내용을 우회해서 크롤링을 가능하게 해주는 cloudscraper 로 html 파일을 가져오면 실행 가능한 것을 확인했습니다.
+    - 해결 방법
+        - 아래의 모듈을 설치합니다.
+        - `!pip install cloudscraper`
+        - `requests.get(source_url)` 으로 되어있는 부분의 코드들을 전부 아래와 같이 교체합니다.
+        - `scraper = cloudscraper.create_scraper()`
+        - `req = scraper.get(source_url)`
+        - 자세한 코드 변경 사항은 version 1.1.0 노트북 코드로 올려두었습니다. (2장 예제 노트북을 참고해주세요)
+        - 관련 내용 참고 링크 : https://hashcode.co.kr/questions/9558/python-requests%EB%A1%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B0%80%EC%A0%B8%EC%98%AC-%EB%95%8C-403-forbidden%EC%9D%B4-%EB%82%98%ED%83%80%EB%82%98%EB%8A%94-%EB%AC%B8%EC%A0%9C-%EC%A7%88%EB%AC%B8%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4
 
 -----
 ### **동영상 강의**
@@ -79,6 +92,11 @@
         - chapter4의 해당 노트북에서 크롤링 부분을 모두 주석처리 하였습니다.
         - 하지만 분석의 내용은 변함 없으니, 이전에 크롤링해둔 데이터로 예제를 실행하시면 됩니다.
         - 이슈를 제기해주신 임상범님(bacchos@gmail.com)께 감사드립니다.
+- version 1.1.0 (2021.05.31)
+    - 2장의 나무위키 예제
+        - 나무위키 페이지의 페이지 소스 및 보안정책 변경으로 인한 크롤링 코드 수정이 있었습니다.
+        - 내용상의 변화는 없고, 추가 패키지를 설치해준 뒤 request 라이브러리 대신 cloudscraper 라이브러리를 사용하기만 하면 됩니다.
+        - 이슈를 제기해주신 이홍규님(phong0104@snu.ac.kr)께 감사드립니다.
 
 -----
 ### **How to contribute**
