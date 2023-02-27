@@ -117,11 +117,11 @@
     - 2장의 나무위키 예제
         - 나무위키 페이지 크롤링 예제를 대신하여, 네이버 뉴스 헤드라인 크롤링 예제로 변경한 예제를 올려두었습니다.
         - 크롤링 대상인 페이지 이외에, 크롤링 방식 및 데이터 분석 방법은 동일합니다.
-        - 예제 링크 : 
+        - 예제 링크 : https://github.com/yoonkt200/python-data-analysis/blob/master/chapter2/(4%EC%87%84%20%ED%81%AC%EB%A1%A4%EB%A7%81%20%EB%B3%80%EA%B2%BD%20%EC%98%88%EC%A0%9C)%20naver-news-crawling.ipynb
     - 4장의 감성 분석 예제
         - 카카오 맵 리뷰 크롤링 예제를 대신하여, 망고플레이트 리뷰 크롤링 예제로 변경한 예제를 올려두었습니다.
         - 크롤링 대상인 페이지 이외에, 크롤링 방식 및 데이터 분석 방법은 동일합니다.
-        - 예제 링크 : 
+        - 예제 링크 : https://github.com/yoonkt200/python-data-analysis/blob/master/chapter4/(4%EC%87%84%20%ED%81%AC%EB%A1%A4%EB%A7%81%20%EB%B3%80%EA%B2%BD%20%EC%98%88%EC%A0%9C)%20mangoplate-crawling.ipynb
 -----
 ### **How to contribute**
 - 이 책을 통해 데이터분석을 학습하고자 하시는 분들, 혹은 학습/강의 교재로 사용하고자 하시는 분들 모두의 의견을 듣고자 합니다.
